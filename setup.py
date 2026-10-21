@@ -1,5 +1,5 @@
 import os
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 
 version = '2.2.1.dev0'
@@ -37,8 +37,7 @@ setup(name='ftw.avatar',
       url='https://github.com/4teamwork/ftw.avatar',
 
       license='GPL2',
-      packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['ftw', ],
+      packages=find_namespace_packages(include=['ftw', 'ftw.*'], exclude=['ez_setup']),
       include_package_data=True,
       zip_safe=False,
 
